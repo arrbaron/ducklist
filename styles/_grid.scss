@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+}
+
+.grid--main {
+  grid-template-columns: 10% 90%;
+  grid-auto-rows: minmax(100, auto);
+  grid-template-areas: 
+  "nav header"
+  "nav main"
+  "nav main";
+}
+
+.grid--ducks {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav {
+  grid-area: nav;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}

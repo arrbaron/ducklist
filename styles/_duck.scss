@@ -1,0 +1,19 @@
+@import "variables";
+
+.ducks {
+  text-align: center;
+}
+
+.duck {
+  background: $secondary-color;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto 0 auto;
+  display: inline-block;
+}
+
+.duck__image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 0 auto;
+}

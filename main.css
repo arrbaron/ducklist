@@ -1,0 +1,49 @@
+.ducks {
+  text-align: center; }
+
+.duck {
+  background: #202020;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto 0 auto;
+  display: inline-block; }
+
+.duck__image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 0 auto; }
+
+.grid {
+  display: grid; }
+
+.grid--main {
+  grid-template-columns: 10% 90%;
+  grid-auto-rows: minmax(100, auto);
+  grid-template-areas: "nav header" "nav main" "nav main"; }
+
+.grid--ducks {
+  grid-template-columns: 1fr 1fr 1fr; }
+
+nav {
+  grid-area: nav; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+nav {
+  background: #202020; }
+  nav p {
+    color: white; }
+  nav p.active {
+    color: yellow; }
+
+header {
+  background: cornflowerblue;
+  text-align: center; }
+
+main {
+  background-color: cornflowerblue;
+  padding: 50px; }
