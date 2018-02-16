@@ -3,15 +3,43 @@
 
 .duck {
   background: #202020;
-  width: 300px;
+  width: 500px;
   height: 300px;
   margin: 50px auto 0 auto;
-  display: inline-block; }
+  display: inline-block;
+  position: relative; }
+
+.duck--active {
+  height: 500px; }
+
+.duck__caption {
+  background-color: green;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.duck__caption.active {
+  color: yellow; }
 
 .duck__image {
   width: 200px;
   height: 200px;
-  margin: 0 auto 0 auto; }
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.duck__description {
+  font-size: 2em;
+  display: flex;
+  align-items: center; }
+
+@media only screen and (max-width: 800px) {
+  .duck, .duck__description {
+    display: block; } }
 
 .grid {
   display: grid; }
@@ -22,7 +50,9 @@
   grid-template-areas: "nav header" "nav main" "nav main"; }
 
 .grid--ducks {
-  grid-template-columns: 1fr 1fr 1fr; }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(100, auto);
+  grid-template-areas: "duck1 duck2 duck3" "duck4 duck-description duck-description"; }
 
 nav {
   grid-area: nav; }
@@ -32,6 +62,25 @@ header {
 
 main {
   grid-area: main; }
+
+.duck:nth-of-type(1) {
+  grid-area: duck1; }
+
+.duck:nth-of-type(2) {
+  grid-area: duck2; }
+
+.duck:nth-of-type(3) {
+  grid-area: duck3; }
+
+.duck:nth-of-type(4) {
+  grid-area: duck4; }
+
+.duck__description {
+  grid-area: duck-description; }
+
+@media only screen and (max-width: 800px) {
+  .grid {
+    display: block; } }
 
 nav {
   background: #202020; }

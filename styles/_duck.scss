@@ -6,14 +6,48 @@
 
 .duck {
   background: $secondary-color;
-  width: 300px;
+  width: 500px;
   height: 300px;
   margin: 50px auto 0 auto;
   display: inline-block;
+  position: relative;
+}
+
+.duck--active {
+  height: 500px;
+}
+
+.duck__caption {
+  background-color: green;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.duck__caption.active {
+    color: yellow;
 }
 
 .duck__image {
   width: 200px;
   height: 200px;
-  margin: 0 auto 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.duck__description {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+  .duck, .duck__description {
+    display: block;
+  }
 }
